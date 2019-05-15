@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.3731575436812274 -0.9025370033408826 -0.21489626612450097 1.1358925105630173
-  position -4.80631557882911 1.404716478495767 2.279037141583575
+  orientation -0.17937679276517235 -0.9729166600820769 -0.1457982810324487 1.3919497580373992
+  position -3.817656568501043 0.6024661831624816 0.9424536841269169
 }
 TexturedBackground {
 }
@@ -13,6 +13,7 @@ Floor {
 }
 Solid {
   translation -1.6824031812077498 0.2700000000000001 0.7410460378563722
+  rotation 0 0.7071067811865475 0.7071067811865475 0
   children [
     DEF GR_OBJECT Group {
       children [
@@ -21,12 +22,12 @@ Solid {
             baseColor 0.12549019607843137 0.2901960784313726 0.5294117647058824
           }
           geometry Cylinder {
-            height 0.3
-            radius 0.05
+            height 0.36
+            radius 0.03
           }
         }
         DEF S_SPHERE1 Transform {
-          translation 0 0.15 0
+          translation 0 0.18 0
           children [
             Shape {
               appearance PBRAppearance {
@@ -39,7 +40,7 @@ Solid {
           ]
         }
         DEF S_SPHERE2 Transform {
-          translation 0 -0.15 0
+          translation 0 -0.18 0
           children [
             Shape {
               appearance PBRAppearance {
@@ -49,6 +50,20 @@ Solid {
                 radius 0.1
               }
             }
+          ]
+        }
+        Transform {
+          translation 0 0.18 0
+          rotation 1 0 0 1.57
+          children [
+            USE S_CYL1
+          ]
+        }
+        Transform {
+          translation 0 -0.18 0
+          rotation 1 0 0 1.57
+          children [
+            USE S_CYL1
           ]
         }
       ]
