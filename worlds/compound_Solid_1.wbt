@@ -14,9 +14,9 @@ Floor {
 Solid {
   translation -1.6824031812077498 0.2700000000000001 0.7410460378563722
   children [
-    Group {
+    DEF GR_OBJECT Group {
       children [
-        Shape {
+        DEF S_CYL1 Shape {
           appearance PBRAppearance {
             baseColor 0.12549019607843137 0.2901960784313726 0.5294117647058824
           }
@@ -25,7 +25,7 @@ Solid {
             radius 0.05
           }
         }
-        Transform {
+        DEF S_SPHERE1 Transform {
           translation 0 0.15 0
           children [
             Shape {
@@ -38,7 +38,7 @@ Solid {
             }
           ]
         }
-        Transform {
+        DEF S_SPHERE2 Transform {
           translation 0 -0.15 0
           children [
             Shape {
@@ -54,4 +54,9 @@ Solid {
       ]
     }
   ]
+  boundingObject USE GR_OBJECT
+  physics Physics {
+    density -1
+    mass 1
+  }
 }
