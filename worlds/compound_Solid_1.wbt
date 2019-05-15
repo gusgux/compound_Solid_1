@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.17937679276517235 -0.9729166600820769 -0.1457982810324487 1.3919497580373992
-  position -3.817656568501043 0.6024661831624816 0.9424536841269169
+  orientation -0.09281761963902467 -0.9913107702468856 -0.09320861696791675 1.5837268532697686
+  position -2.898580844306058 0.4372122582025573 0.998814162504261
 }
 TexturedBackground {
 }
@@ -29,7 +29,7 @@ Solid {
         DEF S_SPHERE1 Transform {
           translation 0 0.18 0
           children [
-            Shape {
+            DEF G_SPHERE_S Shape {
               appearance PBRAppearance {
                 baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
               }
@@ -52,18 +52,36 @@ Solid {
             }
           ]
         }
-        Transform {
-          translation 0 0.18 0
+        DEF S_CYL2 Transform {
+          translation 0 0.18 0.18
           rotation 1 0 0 1.57
           children [
             USE S_CYL1
           ]
         }
-        Transform {
-          translation 0 -0.18 0
+        DEF S_CYL3 Transform {
+          translation 0 -0.18 0.18
           rotation 1 0 0 1.57
           children [
             USE S_CYL1
+          ]
+        }
+        DEF S_CYL4 Transform {
+          translation 0 0 0.36
+          children [
+            USE S_CYL1
+          ]
+        }
+        DEF S_SPHERE3 Transform {
+          translation 0 0.18 0.36
+          children [
+            USE G_SPHERE_S
+          ]
+        }
+        DEF S_SPHERE4 Transform {
+          translation 0 -0.18 0.36
+          children [
+            USE G_SPHERE_S
           ]
         }
       ]
