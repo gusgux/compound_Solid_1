@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.09281761963902467 -0.9913107702468856 -0.09320861696791675 1.5837268532697686
-  position -2.898580844306058 0.4372122582025573 0.998814162504261
+  orientation 0.06266873600491374 -0.9763677805035583 -0.20682984968834078 3.716857317860881
+  position 0.8745118378905865 0.7010094396763825 -1.4473376036260346
 }
 TexturedBackground {
 }
@@ -12,7 +12,7 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation -1.6824031812077498 0.2700000000000001 0.7410460378563722
+  translation 0 0.3 0
   rotation 0 0.7071067811865475 0.7071067811865475 0
   children [
     DEF GR_OBJECT Group {
@@ -34,7 +34,7 @@ Solid {
                 baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
               }
               geometry Sphere {
-                radius 0.1
+                radius 0.08
               }
             }
           ]
@@ -42,14 +42,7 @@ Solid {
         DEF S_SPHERE2 Transform {
           translation 0 -0.18 0
           children [
-            Shape {
-              appearance PBRAppearance {
-                baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
-              }
-              geometry Sphere {
-                radius 0.1
-              }
-            }
+            USE G_SPHERE_S
           ]
         }
         DEF S_CYL2 Transform {
@@ -84,6 +77,30 @@ Solid {
             USE G_SPHERE_S
           ]
         }
+        DEF S_SPHERE5 Transform {
+          translation 0.36 -0.18 0
+          children [
+            USE G_SPHERE_S
+          ]
+        }
+        DEF S_SPHERE6 Transform {
+          translation 0.36 0.18 0.36
+          children [
+            USE G_SPHERE_S
+          ]
+        }
+        DEF S_SPHERE7 Transform {
+          translation 0.36 -0.18 0.36
+          children [
+            USE G_SPHERE_S
+          ]
+        }
+        DEF S_SPHERE8 Transform {
+          translation 0.36 0.18 0
+          children [
+            USE G_SPHERE_S
+          ]
+        }
       ]
     }
   ]
@@ -92,4 +109,18 @@ Solid {
     density -1
     mass 1
   }
+}
+Solid {
+  translation 0 0.3 0.12999999999999998
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.9882352941176471 0.9137254901960784 0.30980392156862746
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "solid(1)"
 }
