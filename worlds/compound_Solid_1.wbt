@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.06266873600491374 -0.9763677805035583 -0.20682984968834078 3.716857317860881
-  position 0.8745118378905865 0.7010094396763825 -1.4473376036260346
+  orientation 0.37569316557958277 0.9094039039787907 0.17843537980155869 5.320584340061375
+  position -1.981726910396558 1.481336814062622 3.236538693383906
 }
 TexturedBackground {
 }
@@ -101,6 +101,61 @@ Solid {
             USE G_SPHERE_S
           ]
         }
+        DEF S_CYL5 Transform {
+          translation 0.36 0 0
+          rotation 1 0 0 0
+          children [
+            USE S_CYL1
+          ]
+        }
+        DEF S_CYL6 Transform {
+          translation 0.36 0.18 0.18
+          rotation 1 0 0 1.57
+          children [
+            USE S_CYL1
+          ]
+        }
+        DEF S_CYL7 Transform {
+          translation 0.36 -0.18 0.18
+          rotation 1 0 0 1.57
+          children [
+            USE S_CYL1
+          ]
+        }
+        DEF S_CYL8 Transform {
+          translation 0.36 0 0.36
+          children [
+            USE S_CYL1
+          ]
+        }
+        DEF S_CYL9 Transform {
+          translation 0.18 0.18 0
+          rotation 0 0 1 1.57
+          children [
+            USE S_CYL1
+          ]
+        }
+        DEF S_CYL910 Transform {
+          translation 0.18 0.18 0.36
+          rotation 0 0 1 1.57
+          children [
+            USE S_CYL1
+          ]
+        }
+        DEF S_CYL911 Transform {
+          translation 0.18 -0.18 0.36
+          rotation 0 0 1 1.57
+          children [
+            USE S_CYL1
+          ]
+        }
+        DEF S_CYL912 Transform {
+          translation 0.18 -0.18 0
+          rotation 0 0 1 1.57
+          children [
+            USE S_CYL1
+          ]
+        }
       ]
     }
   ]
@@ -111,7 +166,7 @@ Solid {
   }
 }
 Solid {
-  translation 0 0.3 0.12999999999999998
+  translation 0.2230820217228986 0.2999999999999999 -0.5778385296509272
   children [
     Shape {
       appearance PBRAppearance {
